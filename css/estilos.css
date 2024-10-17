@@ -1,0 +1,79 @@
+body {
+  padding: 0;
+  margin: 0;
+  background-color: rgb(168, 122, 122);
+  justify-content: center;
+  text-align: center;
+}
+
+.titulo-secundario {
+  text-align: justify;
+  margin-left: 10px;
+  margin-top: 8px;
+}
+
+#btn-adicionarPizzas,
+#btn-concluir,
+#btn-calcularRodizio {
+  margin: 3px;
+  height: 30px;
+  width: 130px;
+  margin-top: 0px;
+}
+
+#btn-calcularRodizio {
+  width: 170px;
+}
+
+p {
+  display: inline-block;
+  padding-inline: 20px;
+}
+
+#select-refri,
+#select-sucos,
+#select-alcolico {
+  margin: 5px;
+}
+
+.container {
+  display: inline-block;
+  width: 1200px;
+  height: 1100px;
+  background-color: #fff;
+  margin-top: 60px;
+  border-radius: 40px;
+}
+
+.principal {
+  box-shadow: 30px 10px 600px 10px;
+  border: 10px solid #1b1b1b;
+}
+
+.rodizios,
+.pizzas,
+.bebidas,
+.calculos {
+  text-align: center;
+  align-items: center;
+  border-top: 1px solid #333;
+  border-radius: 0px;
+  padding-top: 10px;
+  margin-top: 0px;
+  height: 130px;
+}
+
+.pizzas {
+  height: 250px;
+  display: inline-block;
+}
+
+.bebidas {
+  height: 160px;
+}
+
+#outMostrarPizzas,
+#outMostrarPizzas2,
+#outMostrarPizzas3 {
+  display: inline-block;
+}
