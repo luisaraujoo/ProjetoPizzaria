@@ -23,8 +23,9 @@
           </p>
           <input
             type="button"
-            id="btn-calcularRodizio"
-            value="Calcular valor do Rodízio"
+            id="btn-adicionarRodizio"
+            class="buttons"
+            value="Adicionar Rodízio(s)"
           />
         </label>
       </section>
@@ -40,15 +41,23 @@
             type="radio"
             name="tamanhoPizza"
             value="Pequena"
+            class="option-input radio"
             id="rbPequena1"
           />
           Pequena
-          <input type="radio" name="tamanhoPizza" value="Media" id="rbMedia1" />
+          <input
+            type="radio"
+            name="tamanhoPizza"
+            value="Media"
+            class="option-input radio"
+            id="rbMedia1"
+          />
           Média
           <input
             type="radio"
             name="tamanhoPizza"
             value="Grande"
+            class="option-input radio"
             id="rbGrande1"
             checked
           />
@@ -56,6 +65,7 @@
           <input
             type="button"
             id="btn-adicionarPizzas1"
+            class="buttons"
             value="Adicionar Pizza"
           />
         </p>
@@ -68,15 +78,23 @@
             type="radio"
             name="tamanhoPizza"
             value="Pequena"
+            class="option-input radio"
             id="rbPequena2"
           />
           Pequena
-          <input type="radio" name="tamanhoPizza" value="Media" id="rbMedia2" />
+          <input
+            type="radio"
+            name="tamanhoPizza"
+            value="Media"
+            class="option-input radio"
+            id="rbMedia2"
+          />
           Média
           <input
             type="radio"
             name="tamanhoPizza"
             value="Grande"
+            class="option-input radio"
             id="rbGrande2"
             checked
           />
@@ -84,6 +102,7 @@
           <input
             type="button"
             id="btn-adicionarPizzas2"
+            class="buttons"
             value="Adicionar Pizza"
           />
         </p>
@@ -96,15 +115,23 @@
             type="radio"
             name="tamanhoPizza"
             value="Pequena"
+            class="option-input radio"
             id="rbPequena3"
           />
           Pequena
-          <input type="radio" name="tamanhoPizza" value="Media" id="rbMedia3" />
+          <input
+            type="radio"
+            name="tamanhoPizza"
+            value="Media"
+            class="option-input radio"
+            id="rbMedia3"
+          />
           Média
           <input
             type="radio"
             name="tamanhoPizza"
             value="Grande"
+            class="option-input radio"
             id="rbGrande3"
             checked
           />
@@ -112,6 +139,7 @@
           <input
             type="button"
             id="btn-adicionarPizzas3"
+            class="buttons"
             value="Adicionar Pizza"
           />
         </p>
@@ -131,7 +159,12 @@
           <select name="refrigerantes" id="select-qntdRefri">
             <option value="">0</option>
           </select>
-          <input type="button" id="btn-adicionarRefri" value="Adicionar" />
+          <input
+            type="button"
+            class="buttons"
+            id="btn-adicionarRefri"
+            value="Adicionar"
+          />
         </p>
         <p>
           Sucos:
@@ -141,7 +174,12 @@
           <select name="sucos" id="select-qntdSuco">
             <option value="">0</option>
           </select>
-          <input type="button" id="btn-adicionarSuco" value="Adicionar" />
+          <input
+            type="button"
+            class="buttons"
+            id="btn-adicionarSuco"
+            value="Adicionar"
+          />
         </p>
         <p>
           Alcólico:
@@ -151,21 +189,28 @@
           <select name="alcolico" id="select-qntdAlcool">
             <option value="">0</option>
           </select>
-          <input type="button" id="btn-adicionarAlcolico" value="Adicionar" />
+          <input
+            type="button"
+            class="buttons"
+            id="btn-adicionarAlcolico"
+            value="Adicionar"
+          />
         </p>
       </section>
       <!-- Container Calculos -->
       <section class="container calculos">
         <h4 class="titulo-secundario">Calculos:</h4>
-        <p id="outTotal"></p>
-        <p id="outComDesconto"></p>
-        <p id="outListaProdutos"></p>
-        <p id="outMostrarPizzas"></p>
-        <p id="outMostrarPizzas2"></p>
-        <p id="outMostrarPizzas3"></p>
-        <p id="outMostrarRefri"></p>
-        <p id="outMostrarSucos"></p>
-        <p id="outMostrarAlcolicos"></p>
+        <div class="listaProdutos">
+          <h4 id="outTotal"></h4>
+        </div>
+        <div class="listaProdutos">
+          <ul class="disc" id="listaPizzas"></ul>
+        </div>
+        <div class="listaProdutos">
+          <ul class="disc" id="listaBebidas"></ul>
+          <ul class="disc" id="listaBebidas"></ul>
+          <ul class="disc" id="listaBebidas"></ul>
+        </div>
       </section>
       <!-- Fim container Calculos -->
     </div>

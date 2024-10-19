@@ -1,4 +1,5 @@
-// FUNÇÃO SELECIONAT QUANTIDADE DE RODÍZIOS
+let listaPizzas = [];
+// FUNÇÃO SELECIONAR QUANTIDADE DE RODÍZIOS
 
 function quantidadeRodizio() {
   let selectQntdRodizio = document.getElementById("select-rodizio");
@@ -17,19 +18,26 @@ let selectQnt = document.getElementById("select-rodizio");
 selectQnt.addEventListener("click", quantidadeRodizio);
 
 // FUNÇÃO PARA INFORMAR O VALOR DO RODÍZIO E CALCULAR A SOMA DELES
-function concluirQntdRodizios() {
+function adicionarQntdRodizios() {
   let quantidade = Number(selectQnt.value);
-  let outTotal = document.getElementById("outTotal");
 
   let valor = Number(34);
 
   let valorTotal = valor * quantidade;
 
-  outTotal.textContent = `Valor total do rodízio: R$${valorTotal.toFixed(2)}`;
+  let listaRodizio = document.getElementById("listaPizzas");
+  const lista = document.createElement("li");
+  lista.textContent = `Valor total do rodízio: R$${valorTotal.toFixed(2)}`;
+  listaRodizio.appendChild(lista);
+
+  return valorTotal;
 }
 
-let btnConcluir = document.getElementById("btn-calcularRodizio");
-btnConcluir.addEventListener("click", concluirQntdRodizios);
+let btnAdicionarRodizio = document.getElementById("btn-adicionarRodizio");
+btnAdicionarRodizio.addEventListener("click", () => {
+  total += adicionarQntdRodizios();
+  atualizarTotal();
+});
 
 // FIM DA FUNÇÃO CONCLUIR RODÍZIO
 
@@ -149,39 +157,61 @@ function mostrarSabores() {
   let sabor1 = pizzas[sabor1Index];
   let preco = precos[sabor1Index][tamanhoIndex];
 
-  outMostrar.textContent += `Pizza de ${sabor1} - R$${preco.toFixed(2)}`;
+  let listaPizzas = document.getElementById("listaPizzas");
+  const lista = document.createElement("li");
+  lista.textContent += `Pizza de ${sabor1} - R$${preco.toFixed(2)}`;
+  listaPizzas.appendChild(lista);
+
+  return preco;
 }
 
 let btnAdiconar = document.getElementById("btn-adicionarPizzas1");
-btnAdiconar.addEventListener("click", mostrarSabores);
+btnAdiconar.addEventListener("click", () => {
+  total += mostrarSabores();
+  atualizarTotal();
+});
 
 function mostrarSabores2() {
-  let outMostrar = document.getElementById("outMostrarPizzas2");
   let sabores2 = document.getElementById("select-pizzas-2");
   let tamanhoIndex = rbPequena2.checked ? 0 : rbMedia2.checked ? 1 : 2;
   let sabor2Index = Number(sabores2.value);
   let sabor2 = pizzas[sabor2Index];
   let preco = precos[sabor2Index][tamanhoIndex];
 
-  outMostrar.textContent += `Pizza de ${sabor2} - R$${preco.toFixed(2)}`;
+  let listaPizzas = document.getElementById("listaPizzas");
+  const lista = document.createElement("li");
+  lista.textContent += `Pizza de ${sabor2} - R$${preco.toFixed(2)}`;
+  listaPizzas.appendChild(lista);
+
+  return preco;
 }
 
 let btnAdiconar2 = document.getElementById("btn-adicionarPizzas2");
-btnAdiconar2.addEventListener("click", mostrarSabores2);
+btnAdiconar2.addEventListener("click", () => {
+  total += mostrarSabores2();
+  atualizarTotal();
+});
 
 function mostrarSabores3() {
-  let outMostrar = document.getElementById("outMostrarPizzas3");
   let sabores3 = document.getElementById("select-pizzas-3");
   let tamanhoIndex = rbPequena3.checked ? 0 : rbMedia3.checked ? 1 : 2;
   let sabor3Index = Number(sabores3.value);
   let sabor3 = pizzas[sabor3Index];
   let preco = precos[sabor3Index][tamanhoIndex];
 
-  outMostrar.textContent += `Pizza de ${sabor3} - R$${preco.toFixed(2)}`;
+  let listaPizzas = document.getElementById("listaPizzas");
+  const lista = document.createElement("li");
+  lista.textContent += `Pizza de ${sabor3} - R$${preco.toFixed(2)}`;
+  listaPizzas.appendChild(lista);
+
+  return preco;
 }
 
 let btnAdiconar3 = document.getElementById("btn-adicionarPizzas3");
-btnAdiconar3.addEventListener("click", mostrarSabores3);
+btnAdiconar3.addEventListener("click", () => {
+  total += mostrarSabores3();
+  atualizarTotal();
+});
 
 // FIM DA FUNÇÃO PARA MOSTRAR SABORES
 
@@ -328,53 +358,83 @@ qntdAlcolicos.addEventListener("click", () => {
 
 // FUNÇAO MOSTRAR BEBIDAS
 
+let total = 0;
+
 function adicionarRefri() {
-  let outMostrarRefri = document.getElementById("outMostrarRefri");
   let refriSelect = document.getElementById("select-refri");
   let refriSelectQntd = document.getElementById("select-qntdRefri");
   let refriSelectIndex = Number(refriSelect.value);
   let refriSelectQntdIndex = Number(refriSelectQntd.value);
+  let totalRefri = precoRefri[refriSelectIndex] * refriSelectQntdIndex;
 
-  outMostrarRefri.textContent = `${
+  let listaRefri = document.getElementById("listaBebidas");
+  const lista = document.createElement("li");
+  lista.textContent += `${
     refrigerantes[refriSelectIndex]
-  } - ${refriSelectQntdIndex} und. R$${(
-    precoRefri[refriSelectIndex] * refriSelectQntdIndex
-  ).toFixed(2)}`;
+  } - ${refriSelectQntdIndex} und. R$${totalRefri.toFixed(2)}`;
+  listaRefri.appendChild(lista);
+
+  return totalRefri;
 }
 
 let btnAdicionarRefri = document.getElementById("btn-adicionarRefri");
-btnAdicionarRefri.addEventListener("click", adicionarRefri);
+btnAdicionarRefri.addEventListener("click", () => {
+  total += adicionarRefri();
+  atualizarTotal();
+});
 
 function adicionarSucos() {
-  let outMostrarSuco = document.getElementById("outMostrarSucos");
   let sucoSelect = document.getElementById("select-sucos");
   let sucoSelectQntd = document.getElementById("select-qntdSuco");
   let sucoSelectIndex = Number(sucoSelect.value);
   let sucoSelectQntdIndex = Number(sucoSelectQntd.value);
+  let totalSucos = precoSucos[sucoSelectIndex] * sucoSelectQntdIndex;
 
-  outMostrarSuco.textContent = `${
+  let listaSucos = document.getElementById("listaBebidas");
+  const lista = document.createElement("li");
+  lista.textContent += `${
     sucos[sucoSelectIndex]
-  } - ${sucoSelectQntdIndex} und. R$${(
-    precoSucos[sucoSelectIndex] * sucoSelectQntdIndex
-  ).toFixed(2)}`;
+  } - ${sucoSelectQntdIndex} und. R$${totalSucos.toFixed(2)}`;
+  listaSucos.appendChild(lista);
+
+  return totalSucos;
 }
 
 let btnAdicionarSucos = document.getElementById("btn-adicionarSuco");
-btnAdicionarSucos.addEventListener("click", adicionarSucos);
+btnAdicionarSucos.addEventListener("click", () => {
+  total += adicionarSucos();
+  atualizarTotal();
+});
 
 function adicionarAlcolicos() {
-  let outMostrarAlcolico = document.getElementById("outMostrarAlcolicos");
   let alcoolSelect = document.getElementById("select-alcolico");
   let alcoolSelectQntd = document.getElementById("select-qntdAlcool");
   let alcoolSelectIndex = Number(alcoolSelect.value);
   let alcoolSelectQntdIndex = Number(alcoolSelectQntd.value);
+  let totalAlcolicos =
+    precosAlcolicos[alcoolSelectIndex] * alcoolSelectQntdIndex;
 
-  outMostrarAlcolico.textContent = `${
+  let listaAlcolicos = document.getElementById("listaBebidas");
+  const lista = document.createElement("li");
+  lista.textContent = `${
     alcolicos[alcoolSelectIndex]
-  } - ${alcoolSelectQntdIndex} und. R$${(
-    precosAlcolicos[alcoolSelectIndex] * alcoolSelectQntdIndex
-  ).toFixed(2)}`;
+  } - ${alcoolSelectQntdIndex} und. R$${totalAlcolicos.toFixed(2)}`;
+  listaAlcolicos.appendChild(lista);
+
+  return totalAlcolicos;
 }
 
 let btnAdicionarAlcool = document.getElementById("btn-adicionarAlcolico");
-btnAdicionarAlcool.addEventListener("click", adicionarAlcolicos);
+btnAdicionarAlcool.addEventListener("click", () => {
+  total += adicionarAlcolicos();
+  atualizarTotal();
+});
+
+// FIM FUNÇÃO MOSTRAR BEBIDAS
+
+// FUNÇÃO DE CALCULAR TOTAL
+
+function atualizarTotal() {
+  let outTotal = document.getElementById("outTotal");
+  outTotal.textContent = `Total: R$${total.toFixed(2)}`;
+}

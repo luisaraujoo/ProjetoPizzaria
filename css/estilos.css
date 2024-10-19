@@ -2,78 +2,129 @@ body {
   padding: 0;
   margin: 0;
   background-color: rgb(168, 122, 122);
+  display: flex;
   justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: "Inter var", ui-sans-serif, system-ui, system-ui, "Segoe UI",
+    "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-weight: 600;
   text-align: center;
 }
 
-.titulo-secundario {
-  text-align: justify;
-  margin-left: 10px;
-  margin-top: 8px;
-}
-
-#btn-adicionarPizzas,
-#btn-concluir,
-#btn-calcularRodizio {
-  margin: 3px;
-  height: 30px;
-  width: 130px;
-  margin-top: 0px;
-}
-
-#btn-calcularRodizio {
-  width: 170px;
-}
-
-p {
-  display: inline-block;
-  padding-inline: 20px;
-}
-
-#select-refri,
-#select-sucos,
-#select-alcolico {
-  margin: 5px;
-}
-
+/* Container principal */
 .container {
-  display: inline-block;
-  width: 1200px;
-  height: 1100px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly; /* Distribui os itens uniformemente */
+  align-items: center; /* Alinha verticalmente os itens */
+  width: 1000px;
+  height: 1000px; /* Altura ajustável */
   background-color: #fff;
   margin-top: 60px;
-  border-radius: 40px;
+  padding: 10px;
+  padding-top: 1px;
+  border-radius: 24px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.principal {
-  box-shadow: 30px 10px 600px 10px;
-  border: 10px solid #1b1b1b;
-}
-
+/* Estilos para as seções internas */
 .rodizios,
 .pizzas,
 .bebidas,
 .calculos {
+  flex: content; /* Tamanho flexível, ocupando até 40% da largura */
+  margin: 10px;
+  padding: 5px;
+  margin: 5px;
+  margin-bottom: 5px;
+  border: 1px solid #333;
+  border-radius: 12px;
+  background-color: #f9f9f9;
   text-align: center;
-  align-items: center;
-  border-top: 1px solid #333;
-  border-radius: 0px;
-  padding-top: 10px;
-  margin-top: 0px;
-  height: 130px;
 }
 
+h1 {
+  width: 1000px;
+}
+
+/* Rodizios */
+.rodizios {
+  height: 100px;
+}
+
+/* Pizzas */
 .pizzas {
-  height: 250px;
-  display: inline-block;
+  height: 300px;
 }
 
+/* Bebidas */
 .bebidas {
-  height: 160px;
+  height: 300px;
 }
 
-#outMostrarPizzas,
-#outMostrarPizzas2,
-#outMostrarPizzas3 {
-  display: inline-block;
+/* Cálculos */
+.calculos {
+  height: 150px;
+}
+
+/* Ajustes globais */
+.titulo-secundario {
+  text-align: justify;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+p {
+  padding-inline: 20px;
+}
+
+/* SELECTS */
+select {
+  background-color: #f5c1c1;
+  border: 0;
+  border-radius: 0.5rem;
+  color: #3f3f3f;
+  font-weight: 600;
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
+  text-align: center;
+}
+
+/* BUTTONS */
+.buttons {
+  background-color: #cfbbbb;
+  border: 0;
+  border-radius: 0.5rem;
+  color: #111827;
+  font-weight: 600;
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
+}
+
+.buttons:hover {
+  background-color: rgb(249, 250, 251);
+}
+
+/* RADIOS BUTTONS */
+.option-input {
+  appearance: none;
+  height: 22px;
+  width: 22px;
+  background: #cbd1d8;
+  margin-right: 0.1rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.option-input:checked {
+  background: #40e0d0;
+  content: "\f00c";
+}
+
+.option-input.radio {
+  border-radius: 50%;
 }
