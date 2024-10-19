@@ -9,208 +9,217 @@
     <title>Calculo Comandas</title>
   </head>
   <body>
-    <div class="container principal">
+    <div class="container-principal">
       <h1>Calculo de Comandas</h1>
       <!--  Container de Rodizio -->
       <section class="container rodizios">
-        <h4 class="titulo-secundario">Rodízios:</h4>
-        <label>
+        <label id="label-select">
+          <h4 class="titulo-secundario">Rodízios:</h4>
           <p>
             Quantidade de Rodízios:
             <select name="numero-rodizio" id="select-rodizio">
-              <option value="" disabled selected>Selecione a Quantidade</option>
+              <option value="" disabled selected>Selecione a Qntd.</option>
             </select>
+
+            <input
+              type="button"
+              id="btn-adicionarRodizio"
+              class="buttons"
+              value="Adicionar Rodízio(s)"
+            />
           </p>
-          <input
-            type="button"
-            id="btn-adicionarRodizio"
-            class="buttons"
-            value="Adicionar Rodízio(s)"
-          />
         </label>
       </section>
       <!-- Container de Pizzas -->
       <section class="container pizzas">
-        <h4 class="titulo-secundario">Pizzas Consumidas:</h4>
-        <p>
-          <select name="sabor-pizza" class="saborPizza" id="select-pizzas-1">
-            <option disabled selected>Selecione o Sabor</option>
-          </select>
-          :
-          <input
-            type="radio"
-            name="tamanhoPizza"
-            value="Pequena"
-            class="option-input radio"
-            id="rbPequena1"
-          />
-          Pequena
-          <input
-            type="radio"
-            name="tamanhoPizza"
-            value="Media"
-            class="option-input radio"
-            id="rbMedia1"
-          />
-          Média
-          <input
-            type="radio"
-            name="tamanhoPizza"
-            value="Grande"
-            class="option-input radio"
-            id="rbGrande1"
-            checked
-          />
-          Grande
-          <input
-            type="button"
-            id="btn-adicionarPizzas1"
-            class="buttons"
-            value="Adicionar Pizza"
-          />
-        </p>
-        <p>
-          <select name="sabor-pizza" class="saborPizza" id="select-pizzas-2">
-            <option disabled selected>Selecione o Sabor</option>
-          </select>
-          :
-          <input
-            type="radio"
-            name="tamanhoPizza"
-            value="Pequena"
-            class="option-input radio"
-            id="rbPequena2"
-          />
-          Pequena
-          <input
-            type="radio"
-            name="tamanhoPizza"
-            value="Media"
-            class="option-input radio"
-            id="rbMedia2"
-          />
-          Média
-          <input
-            type="radio"
-            name="tamanhoPizza"
-            value="Grande"
-            class="option-input radio"
-            id="rbGrande2"
-            checked
-          />
-          Grande
-          <input
-            type="button"
-            id="btn-adicionarPizzas2"
-            class="buttons"
-            value="Adicionar Pizza"
-          />
-        </p>
-        <p>
-          <select name="sabor-pizza" class="saborPizza" id="select-pizzas-3">
-            <option disabled selected>Selecione o Sabor</option>
-          </select>
-          :
-          <input
-            type="radio"
-            name="tamanhoPizza"
-            value="Pequena"
-            class="option-input radio"
-            id="rbPequena3"
-          />
-          Pequena
-          <input
-            type="radio"
-            name="tamanhoPizza"
-            value="Media"
-            class="option-input radio"
-            id="rbMedia3"
-          />
-          Média
-          <input
-            type="radio"
-            name="tamanhoPizza"
-            value="Grande"
-            class="option-input radio"
-            id="rbGrande3"
-            checked
-          />
-          Grande
-          <input
-            type="button"
-            id="btn-adicionarPizzas3"
-            class="buttons"
-            value="Adicionar Pizza"
-          />
-        </p>
+        <label id="label-select-pizzas">
+          <h4 class="titulo-secundario">Pizzas Consumidas:</h4>
+          <p>
+            <select name="sabor-pizza" class="saborPizza" id="select-pizzas-1">
+              <option disabled selected>Selecione o Sabor</option>
+            </select>
+            :
+            <input
+              type="radio"
+              name="tamanhoPizza"
+              value="Pequena"
+              class="option-input radio"
+              id="rbPequena1"
+            />
+            Pequena
+            <input
+              type="radio"
+              name="tamanhoPizza"
+              value="Media"
+              class="option-input radio"
+              id="rbMedia1"
+            />
+            Média
+            <input
+              type="radio"
+              name="tamanhoPizza"
+              value="Grande"
+              class="option-input radio"
+              id="rbGrande1"
+              checked
+            />
+            Grande
+            <input
+              type="button"
+              id="btn-adicionarPizzas1"
+              class="buttons"
+              value="Adicionar Pizza"
+            />
+          </p>
+          <p>
+            <select name="sabor-pizza" class="saborPizza" id="select-pizzas-2">
+              <option disabled selected>Selecione o Sabor</option>
+            </select>
+            :
+            <input
+              type="radio"
+              name="tamanhoPizza"
+              value="Pequena"
+              class="option-input radio"
+              id="rbPequena2"
+            />
+            Pequena
+            <input
+              type="radio"
+              name="tamanhoPizza"
+              value="Media"
+              class="option-input radio"
+              id="rbMedia2"
+            />
+            Média
+            <input
+              type="radio"
+              name="tamanhoPizza"
+              value="Grande"
+              class="option-input radio"
+              id="rbGrande2"
+              checked
+            />
+            Grande
+            <input
+              type="button"
+              id="btn-adicionarPizzas2"
+              class="buttons"
+              value="Adicionar Pizza"
+            />
+          </p>
+          <p>
+            <select name="sabor-pizza" class="saborPizza" id="select-pizzas-3">
+              <option disabled selected>Selecione o Sabor</option>
+            </select>
+            :
+            <input
+              type="radio"
+              name="tamanhoPizza"
+              value="Pequena"
+              class="option-input radio"
+              id="rbPequena3"
+            />
+            Pequena
+            <input
+              type="radio"
+              name="tamanhoPizza"
+              value="Media"
+              class="option-input radio"
+              id="rbMedia3"
+            />
+            Média
+            <input
+              type="radio"
+              name="tamanhoPizza"
+              value="Grande"
+              class="option-input radio"
+              id="rbGrande3"
+              checked
+            />
+            Grande
+            <input
+              type="button"
+              id="btn-adicionarPizzas3"
+              class="buttons"
+              value="Adicionar Pizza"
+            />
+          </p>
+        </label>
 
         <!-- Botoes Concluir/adicionar Pizzas -->
       </section>
 
       <!-- Container de Bebidas -->
       <section class="container bebidas">
-        <h4 class="titulo-secundario">Bebidas:</h4>
-        <p>
-          Refrigertantes:
-          <select name="refrigerantes" id="select-refri">
-            <option disable selected>Selecione a Bebida</option>
-          </select>
-          Qntd:
-          <select name="refrigerantes" id="select-qntdRefri">
-            <option value="">0</option>
-          </select>
-          <input
-            type="button"
-            class="buttons"
-            id="btn-adicionarRefri"
-            value="Adicionar"
-          />
-        </p>
-        <p>
-          Sucos:
-          <select name="sucos" id="select-sucos">
-            <option>Selecione a Bebida</option></select
-          >Qntd:
-          <select name="sucos" id="select-qntdSuco">
-            <option value="">0</option>
-          </select>
-          <input
-            type="button"
-            class="buttons"
-            id="btn-adicionarSuco"
-            value="Adicionar"
-          />
-        </p>
-        <p>
-          Alcólico:
-          <select name="alcolico" id="select-alcolico">
-            <option>Selecione a Bebida</option></select
-          >Qntd:
-          <select name="alcolico" id="select-qntdAlcool">
-            <option value="">0</option>
-          </select>
-          <input
-            type="button"
-            class="buttons"
-            id="btn-adicionarAlcolico"
-            value="Adicionar"
-          />
-        </p>
+        <label id="label-select-bebidas">
+          <h4 class="titulo-secundario">Bebidas:</h4>
+          <p>
+            Refrigertantes:
+            <select name="refrigerantes" id="select-refri">
+              <option disable selected>Selecione a Bebida</option>
+            </select>
+            Qntd:
+            <select name="refrigerantes" id="select-qntdRefri">
+              <option value="">0</option>
+            </select>
+            <input
+              type="button"
+              class="buttons"
+              id="btn-adicionarRefri"
+              value="Adicionar"
+            />
+          </p>
+          <p>
+            Sucos:
+            <select name="sucos" id="select-sucos">
+              <option>Selecione a Bebida</option>
+            </select>
+            Qntd:
+            <select name="sucos" id="select-qntdSuco">
+              <option value="">0</option>
+            </select>
+            <input
+              type="button"
+              class="buttons"
+              id="btn-adicionarSuco"
+              value="Adicionar"
+            />
+          </p>
+          <p>
+            Alcólico:
+            <select name="alcolico" id="select-alcolico">
+              <option>Selecione a Bebida</option>
+            </select>
+            Qntd:
+            <select name="alcolico" id="select-qntdAlcool">
+              <option value="">0</option>
+            </select>
+            <input
+              type="button"
+              class="buttons"
+              id="btn-adicionarAlcolico"
+              value="Adicionar"
+            />
+          </p>
+        </label>
       </section>
       <!-- Container Calculos -->
       <section class="container calculos">
-        <h4 class="titulo-secundario">Calculos:</h4>
-        <div class="listaProdutos">
-          <h4 id="outTotal"></h4>
-        </div>
-        <div class="listaProdutos">
-          <ul class="disc" id="listaPizzas"></ul>
-        </div>
-        <div class="listaProdutos">
-          <ul class="disc" id="listaBebidas"></ul>
-          <ul class="disc" id="listaBebidas"></ul>
-          <ul class="disc" id="listaBebidas"></ul>
-        </div>
+        <label id="label-calculos">
+          <h4 class="titulo-secundario">Calculos:</h4>
+          <div class="listaProdutos">
+            <h4 id="outTotal"></h4>
+          </div>
+          <div class="listaProdutos">
+            <ul class="disc" id="listaPizzas"></ul>
+          </div>
+          <div class="listaProdutos">
+            <ul class="disc" id="listaBebidas"></ul>
+            <ul class="disc" id="listaBebidas"></ul>
+            <ul class="disc" id="listaBebidas"></ul>
+          </div>
+        </label>
       </section>
       <!-- Fim container Calculos -->
     </div>

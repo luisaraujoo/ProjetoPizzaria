@@ -1,32 +1,65 @@
 body {
   padding: 0;
   margin: 0;
-  background-color: rgb(168, 122, 122);
+  background-color: rgb(58, 58, 58);
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  font-family: "Inter var", ui-sans-serif, system-ui, system-ui, "Segoe UI",
-    "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "Lisu Bosa";
   font-weight: 600;
   text-align: center;
+  background-image: url("../img/plano-de-fundo.png");
+  background-repeat: repeat;
+  background-size: auto;
+  background-position: top left;
+}
+
+body::before {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: "Lisu Bosa";
+  font-weight: 600;
+  text-align: center;
+  background-image: url("../img/plano-de-fundo.png");
+  background-repeat: repeat;
+  background-size: auto;
+  background-position: top left;
+  filter: blur(100%);
+  z-index: -1;
+  opacity: 0.5;
+}
+
+h1 {
+  color: #5a5a5a;
+  font-family: "Lisu Bosa";
+  font-size: 36px;
+  font-style: italic;
+  font-weight: 900;
+  width: 1000px;
+  padding-bottom: 1px;
+  margin: 5px auto;
+}
+
+h4 {
+  color: #5a5a5a;
+  font-family: "Lisu Bosa";
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 500;
 }
 
 /* Container principal */
-.container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly; /* Distribui os itens uniformemente */
-  align-items: center; /* Alinha verticalmente os itens */
+.container-principal {
   width: 1000px;
   height: 1000px; /* Altura ajustável */
-  background-color: #fff;
-  margin-top: 60px;
-  padding: 10px;
-  padding-top: 1px;
-  border-radius: 24px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background-color: #f8f8f8;
+  border-radius: 27px;
+  box-shadow: 300px 300px 300px rgba(0, 0, 0, 0.1);
+  border: 5px solid rgb(58, 58, 58);
+  margin: 30px;
 }
 
 /* Estilos para as seções internas */
@@ -34,94 +67,242 @@ body {
 .pizzas,
 .bebidas,
 .calculos {
-  flex: content; /* Tamanho flexível, ocupando até 40% da largura */
-  margin: 10px;
-  padding: 5px;
-  margin: 5px;
-  margin-bottom: 5px;
-  border: 1px solid #333;
-  border-radius: 12px;
-  background-color: #f9f9f9;
-  text-align: center;
+  border: 1px solid #5a5a5a;
+  border-radius: 27px;
+  background-color: #fafafa;
+  align-items: center;
+  justify-content: center;
+  width: 963px;
+  height: 190px;
+  margin: 13px auto;
+  display: flex;
 }
 
-h1 {
-  width: 1000px;
-}
-
-/* Rodizios */
-.rodizios {
-  height: 100px;
-}
-
-/* Pizzas */
-.pizzas {
-  height: 300px;
-}
-
-/* Bebidas */
-.bebidas {
-  height: 300px;
-}
-
-/* Cálculos */
 .calculos {
-  height: 150px;
+  height: 215px;
 }
 
-/* Ajustes globais */
-.titulo-secundario {
+.rodizios {
+  margin-top: 0px;
+}
+
+.pizzas,
+.bebidas {
+  height: 240px;
+}
+
+#label-select {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  width: 900px;
+  width: 100%;
+  font-size: 16px;
+  flex-wrap: nowrap;
+  text-align: center;
+  height: 100%;
+  color: #5a5a5a;
+  font-family: "Lisu Bosa";
+  font-size: 21px;
+  font-style: italic;
+  font-weight: 500;
+}
+
+#label-select h4 {
+  color: #5a5a5a;
+  font-family: "Lisu Bosa";
+  font-size: 24px;
+  font-style: italic;
+  font-weight: 550;
+  line-height: normal;
   text-align: justify;
-  margin-left: 10px;
-  margin-top: 10px;
+  padding: 13px;
+  margin-top: -103px;
+  position: absolute;
 }
 
-p {
-  padding-inline: 20px;
+#label-select-pizzas {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  width: 900px;
+  width: 100%;
+  font-size: 16px;
+  flex-wrap: nowrap;
+  text-align: center;
+  color: #5a5a5a;
+  font-family: "Lisu Bosa";
+  font-size: 21px;
+  font-style: italic;
+  font-weight: 500;
+  margin: 0px;
+  padding: 0px;
+  margin-top: 0px;
+  padding-top: 0px;
+}
+
+#label-select-pizzas p {
+  padding: 0px;
+  margin: 0;
+  padding-top: 19px;
+  margin-top: 0;
+}
+
+#label-select-pizzas select {
+  margin: 0;
+}
+
+#label-select-pizzas h4 {
+  color: #5a5a5a;
+  font-family: "Lisu Bosa";
+  font-size: 24px;
+  font-style: italic;
+  font-weight: 550;
+  line-height: normal;
+  text-align: justify;
+  padding: 13px;
+  margin-top: -160px;
+  position: absolute;
+}
+
+#label-select-bebidas {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 900px;
+  width: 100%;
+  font-size: 16px;
+  flex-wrap: wrap;
+  text-align: center;
+  color: #5a5a5a;
+  font-family: "Lisu Bosa";
+  font-size: 21px;
+  font-style: italic;
+  font-weight: 500;
+  margin: 0px;
+  padding: 0px;
+  margin-top: 0px;
+  padding-top: 0px;
+}
+
+#label-select-bebidas select {
+  margin: 0;
+}
+
+#label-select-bebidas p {
+  padding: 0px;
+  margin: 0;
+  padding-top: 19px;
+  margin-top: 0;
+  width: 600px;
+}
+
+#label-select-bebidas select[id="select-sucos"] {
+  margin-left: 70px;
+}
+
+#label-select-bebidas select[id="select-alcolico"] {
+  margin-left: 47px;
+}
+
+#label-select-bebidas h4 {
+  color: #5a5a5a;
+  font-family: "Lisu Bosa";
+  font-size: 24px;
+  font-style: italic;
+  font-weight: 550;
+  line-height: normal;
+  text-align: justify;
+  padding: 13px;
+  margin-top: -160px;
+  position: absolute;
+}
+
+#label-calculos {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  width: 900px;
+  width: 100%;
+  font-size: 16px;
+  flex-wrap: nowrap;
+  text-align: center;
+  height: 100%;
+  color: #5a5a5a;
+  font-family: "Lisu Bosa";
+  font-size: 21px;
+  font-style: italic;
+  font-weight: 500;
+}
+
+#label-calculos h4 {
+  color: #5a5a5a;
+  font-family: "Lisu Bosa";
+  font-size: 24px;
+  font-style: italic;
+  font-weight: 550;
+  line-height: normal;
+  text-align: justify;
+  padding: 13px;
+  margin-top: -129px;
+  position: absolute;
 }
 
 /* SELECTS */
 select {
-  background-color: #f5c1c1;
-  border: 0;
-  border-radius: 0.5rem;
-  color: #3f3f3f;
-  font-weight: 600;
-  padding: 0.75rem 1rem;
-  cursor: pointer;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
+  background-color: #fafafa;
+  border: 1px solid #5a5a5a;
+  width: 130px;
+  height: 42px;
   text-align: center;
+  border-radius: 27px;
+  font-family: "Lisu Bosa";
+  font-size: 13px;
+  font-style: italic;
+  font-weight: 500;
+  cursor: pointer;
+  margin: 13px;
+}
+
+select:hover {
+  background-color: #f1f1f1;
 }
 
 /* BUTTONS */
 .buttons {
-  background-color: #cfbbbb;
-  border: 0;
-  border-radius: 0.5rem;
-  color: #111827;
-  font-weight: 600;
-  padding: 0.75rem 1rem;
+  background-color: #87fcaa;
+  border: 1px solid #5a5a5a;
+  width: 130px;
+  height: 42px;
+  border-radius: 27px;
+  color: #5a5a5a;
+  font-family: "Lisu Bosa";
+  font-size: 13px;
+  font-style: italic;
+  font-weight: 500;
   cursor: pointer;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
+  text-align: center;
 }
 
 .buttons:hover {
-  background-color: rgb(249, 250, 251);
+  background-color: #72e093;
 }
 
 /* RADIOS BUTTONS */
 .option-input {
   appearance: none;
-  height: 22px;
-  width: 22px;
-  background: #cbd1d8;
+  height: 15px;
+  width: 15px;
+  background: #fafafa;
   margin-right: 0.1rem;
   border-radius: 50%;
+  border: 0.5px solid #5a5a5a;
   cursor: pointer;
 }
 
 .option-input:checked {
-  background: #40e0d0;
+  background: #bbbbbb;
   content: "\f00c";
 }
 
