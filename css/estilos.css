@@ -220,20 +220,58 @@ h4 {
 }
 
 #label-calculos {
-  display: grid;
-  justify-content: center;
-  align-items: center;
+  display: flex;
   width: 900px;
   width: 100%;
   font-size: 16px;
-  flex-wrap: nowrap;
-  text-align: center;
+  flex-wrap: wrap;
   height: 100%;
   color: #5a5a5a;
   font-family: "Lisu Bosa";
-  font-size: 21px;
+  font-size: 15px;
   font-style: italic;
   font-weight: 500;
+}
+
+.listaTitulo,
+.listaLista,
+.listaValor {
+  width: 321px;
+  height: 215px;
+}
+
+.listaLista {
+  display: inline-block;
+  overflow-y: auto;
+}
+
+#listaProdutos {
+  width: 250px;
+}
+
+#outTotal,
+#outGorjeta,
+#outSubTotal {
+  display: grid;
+  margin-left: 80px;
+  margin: 10px;
+  font-size: 25px;
+  justify-content: center;
+  align-items: center;
+}
+
+#outTotal {
+  margin-top: 20px;
+}
+
+#outGorjeta {
+  color: #a52fdb;
+}
+
+#outSubTotal {
+  margin-top: 50px;
+  font-size: 30px;
+  color: #ec3232;
 }
 
 #label-calculos h4 {
@@ -247,6 +285,11 @@ h4 {
   padding: 13px;
   margin-top: -129px;
   position: absolute;
+  margin: 0 auto;
+}
+
+h3 {
+  font-size: 30px;
 }
 
 /* SELECTS */
@@ -302,7 +345,7 @@ select:hover {
 }
 
 .option-input:checked {
-  background: #bbbbbb;
+  background: #494949;
   content: "\f00c";
 }
 

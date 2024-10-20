@@ -25,7 +25,7 @@ function adicionarQntdRodizios() {
 
   let valorTotal = valor * quantidade;
 
-  let listaRodizio = document.getElementById("listaPizzas");
+  let listaRodizio = document.getElementById("listaProdutos");
   const lista = document.createElement("li");
   lista.textContent = `Valor total do rodízio: R$${valorTotal.toFixed(2)}`;
   listaRodizio.appendChild(lista);
@@ -157,7 +157,7 @@ function mostrarSabores() {
   let sabor1 = pizzas[sabor1Index];
   let preco = precos[sabor1Index][tamanhoIndex];
 
-  let listaPizzas = document.getElementById("listaPizzas");
+  let listaPizzas = document.getElementById("listaProdutos");
   const lista = document.createElement("li");
   lista.textContent += `Pizza de ${sabor1} - R$${preco.toFixed(2)}`;
   listaPizzas.appendChild(lista);
@@ -178,7 +178,7 @@ function mostrarSabores2() {
   let sabor2 = pizzas[sabor2Index];
   let preco = precos[sabor2Index][tamanhoIndex];
 
-  let listaPizzas = document.getElementById("listaPizzas");
+  let listaPizzas = document.getElementById("listaProdutos");
   const lista = document.createElement("li");
   lista.textContent += `Pizza de ${sabor2} - R$${preco.toFixed(2)}`;
   listaPizzas.appendChild(lista);
@@ -199,7 +199,7 @@ function mostrarSabores3() {
   let sabor3 = pizzas[sabor3Index];
   let preco = precos[sabor3Index][tamanhoIndex];
 
-  let listaPizzas = document.getElementById("listaPizzas");
+  let listaPizzas = document.getElementById("listaProdutos");
   const lista = document.createElement("li");
   lista.textContent += `Pizza de ${sabor3} - R$${preco.toFixed(2)}`;
   listaPizzas.appendChild(lista);
@@ -367,7 +367,7 @@ function adicionarRefri() {
   let refriSelectQntdIndex = Number(refriSelectQntd.value);
   let totalRefri = precoRefri[refriSelectIndex] * refriSelectQntdIndex;
 
-  let listaRefri = document.getElementById("listaBebidas");
+  let listaRefri = document.getElementById("listaProdutos");
   const lista = document.createElement("li");
   lista.textContent += `${
     refrigerantes[refriSelectIndex]
@@ -390,7 +390,7 @@ function adicionarSucos() {
   let sucoSelectQntdIndex = Number(sucoSelectQntd.value);
   let totalSucos = precoSucos[sucoSelectIndex] * sucoSelectQntdIndex;
 
-  let listaSucos = document.getElementById("listaBebidas");
+  let listaSucos = document.getElementById("listaProdutos");
   const lista = document.createElement("li");
   lista.textContent += `${
     sucos[sucoSelectIndex]
@@ -414,7 +414,7 @@ function adicionarAlcolicos() {
   let totalAlcolicos =
     precosAlcolicos[alcoolSelectIndex] * alcoolSelectQntdIndex;
 
-  let listaAlcolicos = document.getElementById("listaBebidas");
+  let listaAlcolicos = document.getElementById("listaProdutos");
   const lista = document.createElement("li");
   lista.textContent = `${
     alcolicos[alcoolSelectIndex]
@@ -436,5 +436,13 @@ btnAdicionarAlcool.addEventListener("click", () => {
 
 function atualizarTotal() {
   let outTotal = document.getElementById("outTotal");
+  let outGorjeta = document.getElementById("outGorjeta");
+  let outSubTotal = document.getElementById("outSubTotal");
+
+  let gorjeta = total * 0.1;
+  let subtotal = total + gorjeta;
+
   outTotal.textContent = `Total: R$${total.toFixed(2)}`;
+  outGorjeta.textContent = `10% : R$${gorjeta.toFixed(2)}`;
+  outSubTotal.textContent = `Subtotal: R$${subtotal.toFixed(2)}`;
 }
